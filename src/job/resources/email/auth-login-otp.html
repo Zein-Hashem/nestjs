@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexRequest - Secure Code</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f7f9fa;
+        color: #333;
+      }
+      .container {
+        width: 100%;
+        max-width: 650px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e5e5;
+      }
+      .header {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .header h1 {
+        font-size: 24px;
+        color: #578e9b;
+        margin: 0;
+      }
+      .content {
+        padding: 20px;
+      }
+      .content h3 {
+        color: #578e9b;
+        font-size: 20px;
+        margin-top: 0;
+      }
+      .content p {
+        margin: 15px 0;
+        line-height: 1.6;
+        font-size: 14px;
+      }
+      .code {
+        text-align: center;
+        font-size: 40px;
+        color: #33322e;
+        font-weight: bold;
+        margin: 25px 0;
+      }
+      .footer {
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #e5e5e5;
+      }
+      .footer a {
+        color: #578e9b;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>FlexRequest</h1>
+      </div>
+      <div class="content">
+        <h3>Confirm Your Email Address</h3>
+        <p>Dear User,</p>
+        <p>
+          Your confirmation code is below. Enter it in your browser to complete the sign-in process.
+        </p>
+        <p class="code">{{token}}</p>
+        <p>This code will expire in {{expiresIn}} minutes for your security.</p>
+        <p>If you didn’t request this email, you can safely ignore it. Your account is secure.</p>
+        <p>Best regards,</p>
+        <p>The FlexRequest Team</p>
+      </div>
+      <div class="footer">
+        <p>
+          This email was sent to <a href="mailto:{{email}}">{{email}}</a> by FlexRequest. <br />
+          If you have any questions, please contact us.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
